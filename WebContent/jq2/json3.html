@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+	<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script type="text/javascript">
+	$(function() {
+		$.getJSON('json3.jsp', function(data) {
+			$.each(data,function(index, item)){
+				var t = "<tr>"
+				t+="<td>"+item.id+"</td>";
+				t+="<td>"+item.name+"</td>";
+				t+="<td>"+item.email+"</td>";
+				t+="</tr>";
+				
+				$('table').append(t);
+			}
+		});
+	});
+
+</script>
+
+</head>
+
+<table border="1">
+	<tr>
+		<td>아이디</td>
+		<td>이름</td>
+		<td>이메일</td>
+	</tr>
+
+</table>
+
+
+<body>
+
+</body>
+</html>
